@@ -1,0 +1,15 @@
+.tab-header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid lightgrey;
+
+  &__label {
+    display: flex;
+    padding: 8px 24px;
+    cursor: pointer;
+
+    &_active {
+      border-bottom: 2px solid lightblue;
+    }
+  }
+}
