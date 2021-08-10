@@ -1,8 +1,8 @@
 <div class="tab-header">
   <div class="tab-header__label"
        *ngFor="let tab of tabs; let i = index"
-       [ngClass]="{'tab-header__label_active': activeTabIndex === i }"
-       (click)="pickTab.emit(i)">
+       [ngClass]="{'tab-header__label_active': activeTabIndex === i, 'tab-header__label_disabled': tab.isDisabled }"
+       (click)="selectTab(tab, i)">
     {{tab.label}}
   </div>
 </div>

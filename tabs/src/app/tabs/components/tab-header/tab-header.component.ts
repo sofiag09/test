@@ -16,4 +16,10 @@ export class TabHeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public selectTab(tab: TabComponent, tabIndex) {
+    if (!tab.isDisabled) {
+      this.pickTab.emit(tabIndex);
+    }
+  }
+
 }

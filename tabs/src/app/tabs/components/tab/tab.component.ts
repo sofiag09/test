@@ -9,6 +9,7 @@ import {ChangeDetectionStrategy, Component, Input, OnInit, TemplateRef, ViewChil
 export class TabComponent implements OnInit {
   @ViewChild(TemplateRef, { static: true }) tabContent: TemplateRef<any>;
   @Input() label: string;
+  @Input() isDisabled: boolean;
 
   constructor() { }
 

@@ -11,5 +11,10 @@
     &_active {
       border-bottom: 2px solid lightblue;
     }
+
+    &_disabled {
+      color: grey;
+      cursor: default;
+    }
   }
 }
