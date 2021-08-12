@@ -8,13 +8,22 @@
     padding: 8px 24px;
     cursor: pointer;
 
-    &_active {
+    &:hover {
+      border-bottom: 1px solid #d0d6e2;
+    }
+
+    &[aria-selected='true'] {
       border-bottom: 2px solid lightblue;
     }
 
-    &_disabled {
+    &[aria-disabled='true'] {
       color: grey;
       cursor: default;
+    }
+
+    &:focus:not([aria-disabled='true']) {
+      background: #e1ffe4;
+      outline: none;
     }
   }
 }
