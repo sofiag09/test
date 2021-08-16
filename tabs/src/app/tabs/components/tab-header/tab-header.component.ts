@@ -1,4 +1,12 @@
-import {Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter, QueryList} from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  Input,
+  Output,
+  EventEmitter,
+  QueryList,
+} from '@angular/core';
 import {TabComponent} from '../tab/tab.component';
 
 @Component({
@@ -39,17 +47,6 @@ export class TabHeaderComponent implements OnInit {
           const id = +event.target.attributes.itemid.value;
           this.selectTab(this.tabs.toArray()[id], id);
         }
-    }
-  }
-
-  public handleKeyDown(event: KeyboardEvent) {
-    switch (event.key) {
-      case 'Home':
-        event.preventDefault();
-        break;
-      case 'End':
-        event.preventDefault();
-        break;
     }
   }
 

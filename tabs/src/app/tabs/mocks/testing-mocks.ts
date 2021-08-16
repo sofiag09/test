@@ -1,4 +1,8 @@
-<div class="app-container">
+import {Component} from '@angular/core';
+
+@Component({
+  selector: 'test-cmp',
+  template: `
   <app-tab-group>
     <app-tab label="First">
       1 content
@@ -13,4 +17,8 @@
       4 content
     </app-tab>
   </app-tab-group>
-</div>
+  `,
+})
+export class TestWrapperComponent {
+
+}

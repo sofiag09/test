@@ -1,14 +1,17 @@
 <div class="tab-header">
   <div class="tab-header__label"
        *ngFor="let tab of tabs; let i = index"
-       (keydown)="handleKeyDown($event)"
        (keyup)="handleKeyUp($event)"
        tabindex="{{tab.isDisabled ? -1 : 0}}"
        [attr.aria-selected]="activeTabIndex === i"
        [attr.aria-controls]="i"
        [attr.aria-disabled]="tab.isDisabled"
        [attr.itemid]="i"
+       appFocusIndicator
+       [focusIndicatorTmpl]="indicator"
        (click)="selectTab(tab, i)">
     {{tab.label}}
   </div>
 </div>
+
+<div class="tab-header__active-label" #indicator></div>
